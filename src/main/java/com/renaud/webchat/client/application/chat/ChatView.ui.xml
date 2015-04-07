@@ -1,0 +1,43 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+    <ui:style>
+        .message-window {
+            width: 500px;
+            height: 500px;
+            resize: none;
+            overflow-y: scroll;
+        }
+        .users-list {
+            width: 100px;
+            height: 500px;
+            resize: none;
+            overflow-y: scroll;
+        }
+        .input-box {
+            width: 500px;
+            resize: vertical;
+            min-height: 50px;
+            max-height: 200px;
+        }
+        button {
+            width: 100px;
+        }
+
+    </ui:style>
+    <g:HTMLPanel>
+        <h2>This is the chat window!</h2>
+        <g:HorizontalPanel>
+            <g:TextArea ui:field="messageWindow" styleName="{style.message-window}" readOnly="true"/>
+            <g:TextArea ui:field="usersList" styleName="{style.users-list}" readOnly="true"/>
+        </g:HorizontalPanel>
+        <g:HorizontalPanel>
+            <g:TextArea ui:field="inputBox" styleName="{style.input-box}"/>
+            <g:VerticalPanel>
+                <g:Button ui:field="btnSend" text="Send"/>
+                <g:Button ui:field="btnDisconnect" text="Disconnect"/>
+            </g:VerticalPanel>
+        </g:HorizontalPanel>
+    </g:HTMLPanel>
+</ui:UiBinder>
